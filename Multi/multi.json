@@ -1,0 +1,45 @@
+# CONFIGURACIÓN BÁSICA
+PUERTO_MULTISERVIDOR = 7779         
+PUERTO_SINCRONIZADOR = 19999       
+VERSION_CLIENTE = ANY             
+
+# CONFIGURACIÓN DE BASE DE DATOS
+BD_HOST = 127.0.0.1                  
+BD_USUARIO = root                    
+BD_PASS =                            
+BD_CUENTAS = cuentas                        
+
+# SEGURIDAD Y CONEXIONES
+MAX_CUENTAS_POR_IP = 8               
+MAX_CONEXION_POR_SEGUNDO = 10        
+PERMITIR_MULTICUENTA = true          
+ENCRIPTAR_IP = false                 
+PARAM_ANTI_DDOS = true                
+
+# TIEMPOS Y LIMITES
+MILISEGUNDOS_SIG_CONEXION = 500      
+SEGUNDOS_ESPERA = 15                
+SEGUNDOS_TRANSACCION_BD = 10         
+LIMITE_JUGADORES = 100              
+
+# AUDIO Y MULTIMEDIA
+SONIDO_BIENVENIDA = 
+DIRECTORIO_LOCAL_MP3 = 
+URL_LINK_MP3 =  
+
+# MONITOREO Y DEBUG
+MODO_DEBUG = false                   
+MOSTRAR_ENVIOS = false              
+MOSTRAR_RECIBIDOS = false            
+MOSTRAR_SINCRONIZACION = false       
+PARAM_MOSTRAR_IP = false              
+PARAM_MOSTRAR_EXCEPTIONS = false      
+
+# SERVIDORES ADICIONALES
+CONFIG_SERVERS = 1,5555;2,5556       
+
+# OPCIONES AVANZADAS
+ACTIVAR_FILA_ESPERA = true           
+ACCESO_VIP = false                    
+SEGUNDOS_ESTADISTICAS = 300          
+SEGUNDOS_INFO_STATUS = 60            
