@@ -1,46 +1,71 @@
-# bustemu - Composant Multi
+# Aemux Multi
 
-![État du Build - Multi](https://img.shields.io/badge/build-passing-brightgreen) 
+![Estado del Build - Aemux Multi](https://img.shields.io/badge/build-passing-brightgreen)
 
-## Description du Composant
+## Descripción del Componente
 
-Le composant **Multi** de **bustemu** est responsable de la gestion de la capacité multi-instance et de l'interaction potentielle entre différents "jeux" ou instances de serveur au sein de l'émulateur Dofus. Sa fonction principale est de permettre l'exécution et la coordination simultanées de plusieurs sessions de jeu, en optimisant l'utilisation des ressources et en facilitant l'expérience multi-joueurs à grande échelle.
+El componente **Aemux Multi** es el encargado de gestionar la capacidad multi-instancia y la posible interacción entre diferentes "juegos" o instancias de servidor. **Actualmente en desarrollo y sujeto a actualizaciones constantes**, busca proporcionar una plataforma robusta para la ejecución y coordinación simultánea de múltiples sesiones de juego en diversas plataformas.
 
-## Responsabilités Clés
+## Responsabilidades Clave
 
-* **Gestion des Instances :** Orchestration du cycle de vie de multiples instances du composant "Game".
-* **Coordination des Joueurs :** Gestion de la présence et de l'interaction des joueurs à travers différentes instances (si une conception distribuée s'applique).
-* **Gestion des Ressources :** Contrôle et optimisation possibles de l'allocation des ressources (CPU, RAM) à chaque instance de jeu.
-* **Communication Inter-Instances :** Faciliter la communication ou la synchronisation des données entre des instances séparées si l'architecture le nécessite.
+* **Gestión de Instancias:** Orquestación del ciclo de vida de múltiples instancias de un componente "Game".
+* **Coordinación de Jugadores:** Manejo de la presencia y la interacción de jugadores a través de diferentes instancias (si aplica un diseño distribuido).
+* **Gestión de Recursos:** Posible control y optimización en la asignación de recursos (CPU, RAM) a cada instancia de juego.
+* **Comunicación Inter-Instancias:** Facilitar la comunicación o sincronización de datos entre instancias separadas si la arquitectura lo requiere.
 
-## Intégration avec l'Écosystème bustemu
+## Integración con otros Componentes
 
-Le composant Multi interagit étroitement avec :
+El componente Aemux Multi interactúa estrechamente con:
 
-* **Kernel :** Reçoit les informations de connexion et orchestre le démarrage de nouvelles instances de "Game" via les facilités fournies par le Kernel.
-* **Game :** Contrôle et coordonne les instances du composant Game, transmettant les informations pertinentes et gérant leur état au niveau de la session ou du groupe.
+* **Componente Kernel:** Utiliza el Kernel para el manejo de la conexión de red con los clientes y la comunicación general.
+* **Componente Game:** Controla y coordina las instancias del componente Game, pasando información relevante y gestionando su estado a nivel de sesión o grupo.
 
-## Détails Techniques Pertinents
+## Detalles Técnicos Relevantes
 
-*(Adaptez cette section avec des détails spécifiques sur la façon dont vous implémentez la multi-instance, la gestion des processus, la communication, etc.)*
+*(Adapta esta sección con detalles específicos de cómo implementas la multi-instancia, la gestión de procesos, la comunicación, etc.)*
 
-* **Modèle de Concurrence :** Décrivez si vous utilisez des threads, des processus séparés, des acteurs, etc., pour gérer plusieurs instances.
-* **Mécanismes de Communication :** Expliquez comment Multi et les instances de Game communiquent (sockets, files de messages, appels directs).
-* **Stratégies d'Évolutivité :** Détaillez comment ce composant contribue à l'évolutivité globale (ex: répartition de charge basique, gestion efficace des sessions).
+* **Modelo de Concurrencia:** Describe si usas hilos, procesos separados, actores, etc., para manejar múltiples instancias.
+* **Mecanismos de Comunicación:** Explica cómo se comunican Aemux Multi y las instancias del componente Game (sockets, colas de mensajes, llamadas directas).
+* **Estrategias de Escalabilidad:** Detalla cómo este componente contribuye a la escalabilidad general (ej: balanceo de carga básico, gestión eficiente de sesiones).
 
-## Comment Commencer (Composant Multi)
+## Plataformas Soportadas
 
-*(Instructions spécifiques pour compiler et exécuter uniquement le composant Multi, si possible ou pertinent.)*
+Aemux Multi está diseñado para ser compilado y ejecutado en las siguientes plataformas:
 
-1.  Assurez-vous d'avoir le projet bustemu complet cloné et configuré.
-2.  *(Étapes pour compiler/exécuter spécifiquement le module Multi)*.
-3.  *(Toute configuration nécessaire pour que Multi démarre correctement, ex: nombre d'instances par défaut)*.
+* **Windows**
+* **Linux**
+* **macOS**
 
-## Stack Technologique (Si spécifique à ce composant)
+## Cómo Empezar (Configuración en Eclipse)
 
-*(Listez les technologies ou bibliothèques qui sont *particulières* à ce composant et ne sont pas couvertes dans le Stack général du projet principal)*
+Para configurar y ejecutar el componente Aemux Multi en tu entorno de desarrollo:
 
-* Technologie/Bibliothèque 1
-* Technologie/Bibliothèque 2
+1.  Asegúrate de tener **Eclipse IDE** instalado.
+2.  Verifica que tienes **Java 8** (o una versión compatible) instalado en tu sistema.
+3.  **Descarga el repositorio** del proyecto Aemux (generalmente usando `git clone URL_DEL_REPOSITORIO`).
+4.  **Carga el proyecto en Eclipse:**
+    * Abre Eclipse IDE.
+    * Ve al menú `File` > `New` > `Java Project`.
+    * Dale un nombre a tu proyecto en Eclipse.
+    * En las opciones de creación del proyecto, **desmarca** "Use default location" y navega hasta la carpeta donde descargaste el repositorio en el paso 3. Selecciona esa carpeta.
+    * Haz clic en `Finish`. (Eclipse debería reconocer la estructura si incluye archivos de proyecto, si no, sigue los siguientes pasos).
+5.  **Si creaste un proyecto nuevo y vacío en una ubicación diferente:**
+    * Copia los archivos fuente de la carpeta `src` del repositorio descargado y pégalos en la carpeta `src` de tu nuevo proyecto en Eclipse.
+    * Copia las carpetas o archivos de librerías necesarios a la ubicación adecuada dentro de tu proyecto en Eclipse (como discutimos anteriormente).
+6.  **Configura las librerías en el Build Path:**
+    * Haz clic derecho sobre la carpeta principal de tu proyecto en el "Package Explorer" de Eclipse.
+    * Selecciona `Build Path` > `Configure Build Path...`.
+    * Ve a la pestaña `Libraries`.
+    * Haz clic en `Add External JARs...` (o `Add JARs...` si las librerías ya están dentro de una carpeta en tu proyecto) y selecciona los archivos `.jar` de las librerías que tu componente necesita.
+    * Haz clic en `Apply and Close`.
 
-*(Incluez des sections comme Licence, Contributions et Contact si elles ne sont pas dans un README principal du projet bustemu, ou référencez simplement le README principal s'il existe.)*
+Ahora tu proyecto en Eclipse debería estar configurado para compilar y trabajar con el código fuente y las librerías del componente Aemux Multi.
+
+## Stack Tecnológico (Si es específico de este componente)
+
+*(Lista tecnologías o librerías que sean *particulares* de este componente y no estén cubiertas en el Stack general del proyecto principal)*
+
+* Tecnología/Librería 1
+* Tecnología/Librería 2
+
+*(Incluye secciones como Licencia, Contribuciones y Contacto si no están en un README principal del proyecto, o simplemente referencia al README principal si lo hay.)*
